@@ -1,0 +1,71 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Registration</title>
+</head>
+<body>
+    <div>
+        <form method="post">
+            <fieldset>
+                <legend>Registration</legend>
+                <label>Name :</label>
+                <input type="text" name="name" required />
+                <br />
+                <label>@TempData["name_error"]</label>
+                <hr size="2" />
+                <label>Email :</label>
+                <input type="email" name="email" required />
+                <br />
+                <hr size="2" />
+                <label>User Name :</label>
+                <input type="text" name="username" required />
+                <br />
+                <hr size="2" />
+                <label>Password :</label>
+                <input type="password" name="password" required />
+                <br />
+                <hr size="2" />
+                <label>Confirm Password :</label>
+                <input type="password" name="confirmPassword" required />
+                <br />
+                <label>@TempData["pass_error"]</label>
+                <hr size="2" />
+                <br />
+                <fieldset>
+                    <legend>Gender</legend>
+                    <input type="radio" name="gender" value="Male" checked />
+                    <label>Male</label>
+                    <input type="radio" name="gender" value="Female" />
+                    <label>Female</label>
+                    <input type="radio" name="gender" value="Other" />
+                    <label>Other</label>
+                </fieldset>
+                <br />
+                <hr size="2" />
+                <br />
+                <fieldset>
+                    <legend>Date of Birth</legend>
+                    <input type="number" name="day" min="1" max="31" required />
+                    <label>/</label>
+                    <input type="number" name="month" min="1" max="12" required />
+                    <label>/</label>
+                    <input type="number" name="year" maxlength="4" min="1800" required />
+                    <label>(dd/mm/yyyy)</label>
+                </fieldset>
+                <br />
+                <hr size="2" />
+                <br />
+                <input type="submit" name="registrationSubmit" text="Submit" />
+                <input type="reset" name="formReset" text="Reset" />
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <form method="post">
+            <fieldset>
+                <legend>LogIn</legend>
+                <label>User Name :</label>
+                <input type="text" name="username" required />
+                <br />
+                <br />
+                <label>Password :</label>
+                <input type="password" name="password" required />
+                <br />
+                <label>@TempData["login_error"]</label>
+                <br />
+                <hr size="2" />
+                <input type="checkbox" name="rememberme" />
+                <label>Remember Me</label>
+                <br />
+                <br />
+                <input type="submit" name="loginSubmit" text="Submit" />
+                <a href="">
+                    Forgot Password?
+                </a>
+            </fieldset>
+        </form>
+        
+    </div>
+</body>
+</html>
